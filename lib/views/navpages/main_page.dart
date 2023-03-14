@@ -16,15 +16,15 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  int currentIndex = 0;
+
   final List<Widget> pages = [
     HomePage(),
     BarItemPage(),
     SearchPage(),
     MyPage(),
-    ProfilePage(), // add new page here
+    ProfilePage(),
   ];
-
-  int currentIndex = 0;
 
   void onTap(int index) {
     setState(() {
@@ -44,8 +44,13 @@ class _MainPageState extends State<MainPage> {
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.white,
-        onPressed: () {},
-        tooltip: 'Increment',
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => pages[4]),
+          );
+        },
+        tooltip: 'Profile',
         child: Icon(
           Icons.add,
           color: Colors.black,
