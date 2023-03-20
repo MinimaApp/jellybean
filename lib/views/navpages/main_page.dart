@@ -23,7 +23,7 @@ class _MainPageState extends State<MainPage> {
     BarItemPage(),
     SearchPage(),
     MyPage(),
-    ProfilePage(),
+    SearchBar(),
   ];
 
   void onTap(int index) {
@@ -45,8 +45,7 @@ class _MainPageState extends State<MainPage> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.white,
         onPressed: () {
-          Navigator.push(
-            context,
+          Navigator.of(context, rootNavigator: true).push(
             MaterialPageRoute(builder: (context) => pages[4]),
           );
         },

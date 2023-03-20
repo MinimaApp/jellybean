@@ -82,36 +82,185 @@ class SearchPage extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                  child: Column(
-                children: [
-                  Container(
-                    height: 100,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[300],
-                      borderRadius: BorderRadius.circular(20),
+                child: Column(
+                  children: [
+                    Padding(
+                      padding:
+                          const EdgeInsets.only(left: 10, top: 0, bottom: 0),
+                      child: Text(
+                        "Ready made plans",
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                    SizedBox(height: 10),
+                    Row(
                       children: [
-                        Text(
-                          "Container 1",
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                        Padding(
+                          padding: const EdgeInsetsDirectional.symmetric(
+                              horizontal: 25.0),
+                          child: Container(
+                            height: boxheight,
+                            width: boxwidth,
+                            decoration: BoxDecoration(
+                              color: Color.fromRGBO(23, 85, 172, 10),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Keto",
+                                  style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 18,
+                                      color: Colors.white),
+                                ),
+                                SizedBox(height: 10),
+                                Text(
+                                  "A diet high in fat & low in carbs.",
+                                  style: TextStyle(
+                                      fontSize: 12, color: Colors.white),
+                                ),
+                                SizedBox(height: 10),
+                                Icon(
+                                  Icons.local_dining,
+                                  size: 50,
+                                  color: Colors.white,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                        SizedBox(height: 10),
-                        Text(
-                          "This is some text.",
-                          style: TextStyle(
-                            fontSize: 12,
+                        Container(
+                          height: boxheight,
+                          width: boxwidth,
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(80, 198, 61, 10),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Vegan",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(height: 10),
+                              Text(
+                                "Nourish yourself with plant-based foods.",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(height: 10),
+                              Icon(
+                                Icons.local_florist,
+                                size: 50,
+                                color: Colors.white,
+                              ),
+                            ],
                           ),
                         ),
                       ],
                     ),
-                  ),
-                ],
-              ))
+                    SizedBox(height: 10),
+                    Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsetsDirectional.symmetric(
+                              horizontal: 25.0),
+                          child: Container(
+                            height: boxheight,
+                            width: boxwidth,
+                            decoration: BoxDecoration(
+                              color: Color.fromRGBO(0, 173, 228, 10),
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "Paleo",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 18,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                SizedBox(height: 10),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 18, top: 0, bottom: 0, right: 10),
+                                  child: Text(
+                                    "A diet based on foods our ancestors ate.",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(height: 10),
+                                Icon(
+                                  Icons.palette,
+                                  size: 50,
+                                  color: Colors.white,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                        Container(
+                          height: boxheight,
+                          width: boxwidth,
+                          decoration: BoxDecoration(
+                            color: Color.fromRGBO(55, 95, 107, 10),
+                            borderRadius: BorderRadius.circular(20),
+                          ),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Text(
+                                "Paleo",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                ),
+                              ),
+                              SizedBox(height: 10),
+                              Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 15, top: 0, bottom: 0, right: 10),
+                                child: Text(
+                                  "Avoid gluten for a healthy gut.",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ),
+                              SizedBox(height: 10),
+                              Icon(
+                                Icons.nature_people,
+                                size: 50,
+                                color: Colors.white,
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              )
             ],
           )
         ],
@@ -119,3 +268,6 @@ class SearchPage extends StatelessWidget {
     );
   }
 }
+
+double boxheight = 160;
+double boxwidth = 160;

@@ -38,7 +38,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   flutter_launcher_icons: "^0.11.0"
-  mobile_scanner: ^3.0.0
+  # mobile_scanner: ^3.0.0
   http: ^0.13.5
 flutter_icons:
   android: "launcher_icon"
